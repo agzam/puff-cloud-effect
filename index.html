@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./index.css"/>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
+        <script type="text/javascript" src="./index.js"></script>
+    </head>
+    <body ng-app="app" ng-controller="ctrl">
+        <div class="box" ng-repeat="box in boxes" ng-click="remove(box)">
+            <h1>{{box}}</h1>
+        </div>
+    </body>
+</html>

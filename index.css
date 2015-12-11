@@ -1,0 +1,58 @@
+.hi {
+    width: 128px;
+    height: 128px;
+    background-image: url("./cloud-evaporate-sprite-horizontal.png");
+
+    animation: play .5s steps(5) infinite;
+}
+
+@keyframes play {
+    from { background-position:  -640px; }
+    to { background-position: -0px; }
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    margin: 5px;
+    box-sizing:border-box;
+    position: relative;
+    border: 1px solid #bebebe;
+}
+
+
+.box.ng-move,
+.box.ng-enter,
+.box.ng-leave {
+    transition: all ease-out 0.8s;
+}
+
+.box.ng-leave.ng-leave-active,
+.box.ng-move,
+.box.ng-enter {
+  opacity:0;
+}
+
+.box.ng-leave,
+.box.ng-move.ng-move-active,
+.box.ng-enter.ng-enter-active {
+  opacity:1;
+}
+.box.ng-leave::before{
+    content:' ';
+    position: absolute;
+    margin-left: calc(50% - 64px);
+    width: 128px;
+    height: 128px;
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url("./cloud-evaporate-sprite-horizontal.png");
+
+    animation: play .5s steps(5) infinite;
+}
+.box.ng-leave {
+    max-height: 100%;
+}
+.box.ng-leave-active {
+    max-height: 0;
+}
